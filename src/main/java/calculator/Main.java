@@ -32,6 +32,16 @@ public class Main {
                 calc.usarResta();
                 System.out.println(calc.resta.operar());
             }
+
+            if(operator == '*') {
+                calc.usarMult();
+                System.out.println(calc.mult.operar());
+            }
+
+            if (operator == '/') {
+                calc.userDiv();
+                System.out.println(calc.divi.operar());
+            }
         }
     }
 }

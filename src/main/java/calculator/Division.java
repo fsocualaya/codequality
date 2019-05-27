@@ -1,6 +1,6 @@
 package calculator;
 
-public class Division extemds Operation{
+public class Division extends Operation{
     public Division(float _a, float _b){
         a = _a;
         b = _b;
@@ -9,11 +9,11 @@ public class Division extemds Operation{
     public float operar(){
         if(b == 0){
             if(a == 0)
-                return float.NaN;
+                return Float.NaN;
             else if(a >0)
-                return float.POSITIVE_INFINITY;
+                return Float.POSITIVE_INFINITY;
             else
-                return float.NEGATIVE_INFINITY;
+                return Float.NEGATIVE_INFINITY;
          }
          return a / b;
     }
