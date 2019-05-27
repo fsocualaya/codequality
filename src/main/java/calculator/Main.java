@@ -5,29 +5,33 @@ package calculator;
 import java.util.Scanner;
 
 public class Main {
-    static boolean  tienedosnum(String cade) {
-        String[] cortado = cade.split("");
-        int suma = cade.indexOf('+');
-        int resta = cade.indexOf('-');
-        if(suma >= 0 && resta >= 0) {
-            return false;
-        }
-        if (suma >= 0) return false;
-        return false;
-    }
 
     public static void main(String[] args) {
 	// write your code here
         Scanner sc = new Scanner(System.in);
         String matematica = "";
-        do {
-            System.out.println("Ingresar la expresion que contenga 2 numeros y un operador como + o -");
-            matematica = sc.nextLine();
-
-            Calculadora calculadora = new Calculadora(3, 4);
-            System.out.println(calculadora.resta.operar());
-            System.out.println(calculadora.suma.operar());
-
-        } while(tienedosnum(matematica));
+        float a = 0;
+        float b = 0;
+        char operator;
+        System.out.println("Ingresa numero 1 : ");
+        a = sc.nextFloat();
+        System.out.println("Ingresa el operador : ");
+        operator = sc.next().charAt(0);
+        System.out.println("Ingresa numero 2 : ");
+        b = sc.nextFloat();
+        if (operator == '/' && b == 0) {
+            System.out.println("ERROR NO SE PUEDE DIVIDIR ENTRE CERO");
+        }
+        else {
+            Calculadora calc = new Calculadora(a, b);
+            if(operator == '+' ) {
+                calc.usarSuma();
+                System.out.println(calc.suma.operar());
+            }
+            if(operator == '-') {
+                calc.usarResta();
+                System.out.println(calc.resta.operar());
+            }
+        }
     }
 }
