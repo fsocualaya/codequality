@@ -1,9 +1,9 @@
 package calculator;
 
 public class Division extends Operation{
-    public Division(float _a, float _b){
-        a = _a;
-        b = _b;
+    public Division(float _firstNumber, float _secondnumber){
+        a = _firstNumber;
+        b = _secondnumber;
     }
 
     public float operar(){

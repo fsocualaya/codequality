@@ -9,37 +9,40 @@ public class Main {
     public static void main(String[] args) {
 	// write your code here
         Scanner sc = new Scanner(System.in);
-        String matematica = "";
-        float a = 0;
-        float b = 0;
+        float firstNumber = 0;
+        float secondNumber = 0;
         char operator;
         System.out.println("Ingresa numero 1 : ");
-        a = sc.nextFloat();
+        firstNumber = sc.nextFloat();
         System.out.println("Ingresa el operador : ");
         operator = sc.next().charAt(0);
         System.out.println("Ingresa numero 2 : ");
-        b = sc.nextFloat();
-        if (operator == '/' && b == 0) {
+        secondNumber = sc.nextFloat();
+        if (operator == '/' && secondNumber == 0) {
             System.out.println("ERROR NO SE PUEDE DIVIDIR ENTRE CERO");
         }
         else {
-            Calculadora calc = new Calculadora(a, b);
+            Calculator calc = new Calculator(firstNumber, secondNumber);
             if(operator == '+' ) {
                 calc.usarSuma();
-                System.out.println(calc.suma.operar());
+                System.out.print("La suma es: ");
+                System.out.println(calc.adition.operar());
             }
             if(operator == '-') {
                 calc.usarResta();
-                System.out.println(calc.resta.operar());
+                System.out.print("La resta es: ");
+                System.out.println(calc.substraction.operar());
             }
 
             if(operator == '*') {
                 calc.usarMult();
+                System.out.print("La multiplicacion es: ");
                 System.out.println(calc.mult.operar());
             }
 
             if (operator == '/') {
                 calc.userDiv();
+                System.out.print("La division es: ");
                 System.out.println(calc.divi.operar());
             }
         }
