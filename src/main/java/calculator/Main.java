@@ -37,13 +37,13 @@ public class Main {
             if(operator == '*') {
                 calc.usarMult();
                 System.out.print("La multiplicacion es: ");
-                System.out.println(calc.mult.operar());
+                System.out.println(calc.multiplication.operar());
             }
 
             if (operator == '/') {
                 calc.userDiv();
                 System.out.print("La division es: ");
-                System.out.println(calc.divi.operar());
+                System.out.println(calc.division.operar());
             }
         }
     }

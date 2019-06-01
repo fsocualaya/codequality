@@ -4,8 +4,8 @@ public class Calculator {
     float a ,b;
     Substraction substraction;
     Adition adition;
-    Multiplication mult;
-    Division divi;
+    Multiplication multiplication;
+    Division division;
     Calculator(float _firstNumber, float _secondNumber) {
         a = _firstNumber;
         b = _secondNumber;
@@ -18,8 +18,8 @@ public class Calculator {
         substraction = new Substraction(a, b);
     }
     void usarMult() {
-        mult = new Multiplication(a,b);
+        multiplication = new Multiplication(a,b);
     }
-    void userDiv() { divi = new Division(a,b); }
+    void userDiv() { division = new Division(a,b); }
 
 }
